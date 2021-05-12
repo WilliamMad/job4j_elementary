@@ -6,10 +6,11 @@ public class Defragment {
             if (array[i] == null) {
                 int point = i;
                 for (int j = point + 1; j < array.length; j++) {
-                    if (array[j] != null && array[i] == null) {
+                    if (array[j] != null) {
                         String temp = array[j];
                         array[j] = array[i];
                         array[i] = temp;
+                        break;
                     }
                 }
             }
